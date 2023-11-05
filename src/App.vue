@@ -28,8 +28,12 @@ export default {
 </script>
 
 <template>
-  <h1>Hello World!</h1>
-  <ProjectCard />
+  <div class="container">
+    <h1>Luigi's Projects</h1>
+    <div class="row rows-cols-4 g-3">
+      <ProjectCard v-for="project in projects" :project="project" />
+    </div>
+  </div>
 </template>
 
 <style lang="scss"></style>
