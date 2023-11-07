@@ -1,6 +1,7 @@
 <script>
 import { RouterView } from "vue-router";
 import ProjectCard from "./components/projects/ProjectCard.vue";
+import NavbarUi from "./components/ui/NavbarUi.vue";
 import axios from "axios";
 
 export default {
@@ -16,7 +17,7 @@ export default {
       pagination: { links: null },
     };
   },
-  components: { ProjectCard, RouterView },
+  components: { ProjectCard, RouterView, NavbarUi },
 
   methods: {
     fetchProjects(uri = this.api.baseUrl + "projects") {
@@ -35,7 +36,7 @@ export default {
 
 <template>
   <div class="container my-3">
-    <h1>Luigi's Projects</h1>
+    <NavbarUi />
 
     <router-view></router-view>
     <div class="row row-cols-4 g-3">
