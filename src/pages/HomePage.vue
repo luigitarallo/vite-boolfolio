@@ -14,6 +14,7 @@ export default {
 
 <template>
   <h1>{{ title }}</h1>
+  <p>Prova</p>
 </template>
 
 <style lang="scss" scoped></style>

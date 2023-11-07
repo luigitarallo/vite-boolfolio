@@ -12,8 +12,8 @@ const router = createRouter({
       component: HomePage,
     },
     {
-      path: "/porfolio",
-      name: "porfolio",
+      path: "/portfolio",
+      name: "portfolio",
       component: PortfolioPage,
     },
   ],

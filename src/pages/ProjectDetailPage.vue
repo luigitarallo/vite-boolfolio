@@ -7,10 +7,6 @@ export default {
       title: "Hello world",
     };
   },
-
-  // components: {
-  //   MyComponent,
-  // },
 };
 </script>
 
