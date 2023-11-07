@@ -1,4 +1,5 @@
 <script>
+import { RouterView } from "vue-router";
 import ProjectCard from "./components/projects/ProjectCard.vue";
 import axios from "axios";
 
@@ -15,7 +16,7 @@ export default {
       pagination: { links: null },
     };
   },
-  components: { ProjectCard },
+  components: { ProjectCard, RouterView },
 
   methods: {
     fetchProjects(uri = this.api.baseUrl + "projects") {
@@ -35,6 +36,8 @@ export default {
 <template>
   <div class="container my-3">
     <h1>Luigi's Projects</h1>
+
+    <router-view></router-view>
     <div class="row row-cols-4 g-3">
       <ProjectCard v-for="project in projects" :project="project" />
     </div>
