@@ -18,13 +18,19 @@ export default {
       </div>
       <div class="card-body">
         <strong>Type: </strong>
-        <span
+        <router-link
+          :to="{
+            name: 'projects-by-type',
+            params: {
+              type_id: project.type_id,
+            },
+          }"
           v-if="project.type"
           class="badge"
           :style="{ backgroundColor: project.type.color }"
         >
           {{ project.type.name }}
-        </span>
+        </router-link>
         <span class="badge text-bg-warning" v-else>Not defined</span>
 
         <h6 class="card-text mb-2">
