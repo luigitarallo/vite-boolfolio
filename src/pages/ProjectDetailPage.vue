@@ -1,17 +1,29 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
+import ProjectCard from "../components/projects/ProjectCard.vue";
+import axios from "axios";
 
 export default {
   data() {
     return {
-      title: "Hello world",
+      project: null,
+      api: {
+        baseUrl: "http://localhost:8000/api/",
+      },
     };
+  },
+  components: { ProjectCard },
+  created() {
+    axios
+      .get(this.api.baseUrl + "projects/" + this.$route.params.id)
+      .then((response) => {
+        this.project = response.data;
+      });
   },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <ProjectCard :project="project" :isDetail="true" v-if="project" />
 </template>
 
 <style lang="scss" scoped></style>
