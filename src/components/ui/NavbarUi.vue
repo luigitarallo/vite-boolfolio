@@ -23,7 +23,7 @@ export default {};
             <router-link
               class="nav-link"
               aria-current="page"
-              :to="{ name: homepage }"
+              :to="{ name: 'homepage' }"
               >Home</router-link
             >
           </li>
@@ -31,7 +31,7 @@ export default {};
             <router-link
               class="nav-link"
               aria-current="page"
-              :to="{ name: portfolio }"
+              :to="{ name: 'portfolio' }"
               >Portfolio</router-link
             >
           </li>
