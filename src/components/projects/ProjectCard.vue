@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div class="col">
-    <div class="card h-100" style="width: 18rem">
+    <div class="card h-100">
       <div class="card-header text-bg-primary py-2">
         {{ project.name }}
       </div>
