@@ -5,6 +5,7 @@ export default {
   },
   props: {
     project: Object,
+    isDetail: Boolean,
   },
 };
 </script>
@@ -43,7 +44,14 @@ export default {
         <p class="card-text">
           <strong>Description: </strong>{{ project.description }}
         </p>
-        <a href="{{ project.link }}">Link</a>
+        <a :href="project.link">Link</a>
+      </div>
+      <div class="card-footer text-body-secondary text-center" v-if="!isDetail">
+        <router-link
+          :to="{ name: 'project-detail', params: { id: project.id } }"
+          class="btn btn-primary"
+          >Details</router-link
+        >
       </div>
     </div>
   </div>
